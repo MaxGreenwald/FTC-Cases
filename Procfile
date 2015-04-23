@@ -1,0 +1,1 @@
+web: gunicorn ftcCases:app --log-file=-
