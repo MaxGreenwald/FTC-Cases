@@ -1,296 +1,347 @@
-html
-{ height: 100%;}
+﻿/*=============================================================
+    Authour URL: www.designbootstrap.com
+    
+    http://www.designbootstrap.com/
 
-*
-{ margin: 0;
-  padding: 0;}
+    License: MIT
 
-body
-{ font: normal .80em 'trebuchet ms', arial, sans-serif;
-  background: #F0EFE2;
-  color: #777;}
+    http://opensource.org/licenses/MIT
 
-p
-{ padding: 0 0 20px 0;
-  line-height: 1.7em;}
+    100% Free To use For Personal And Commercial Use.
 
-img
-{ border: 0;}
+    IN EXCHANGE JUST TELL PEOPLE ABOUT THIS WEBSITE
+   
+========================================================  */
 
-h1, h2, h3, h4, h5, h6 
-{ font: normal 175% 'century gothic', arial, sans-serif;
-  color: #43423F;
-  margin: 0 0 15px 0;
-  padding: 15px 0 5px 0;}
+/*================================
+    GOOGLE FONT
+==================================*/
 
-h2
-{ font: normal 175% 'century gothic', arial, sans-serif;
-  color: #1293EE;}
+@import url(http://fonts.googleapis.com/css?family=Lato); /* FREE GOOGLE FONTS */
 
-h4, h5, h6
-{ margin: 0;
-  padding: 0 0 5px 0;
-  font: normal 120% arial, sans-serif;
-  color: #1293EE;}
+/*================================
+  GENERAL STYLES
+==================================*/
 
-h5, h6
-{ font: italic 95% arial, sans-serif;
-  padding: 0 0 15px 0;
-  color: #000;}
+body {
+   font-family: 'Lato', sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+}
 
-h6
-{ color: #362C20;}
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
-a, a:hover
-{ outline: none;
-  text-decoration: underline;
-  color: #F05A00;}
+.pad-bottom {
+    padding-bottom: 70px;
+}
 
-a:hover
-{ text-decoration: none;}
+.text-right {
+    text-align:right;
+}
 
-.left
-{ float: left;
-  width: auto;
-  margin-right: 10px;}
+.head-line {
+ margin-bottom: 20px;
+line-height: 30px;
+font-size: 25px;
+color: #737373;
+}
 
-.right
-{ float: right; 
-  width: auto;
-  margin-left: 10px;}
 
-.center
-{ display: block;
-  text-align: center;
-  margin: 20px auto;}
+/*================================
+  HEADER STYLES
+==================================*/
 
-blockquote
-{ margin: 20px 0; 
-  padding: 10px 20px 0 20px;
-  border: 1px solid #E5E5DB;
-  background: #FFF;}
+header {
+    background-color:#48A5FF;
+    color:#fff;
+    padding-top: 20px;
+    padding-bottom: 12px;
+}
 
-ul
-{ margin: 2px 0 22px 17px;}
+    header .logo-wrapper img {
+      max-height: 35px;
+    }
+    header .menu-links {
+        padding-top:5px;
+    }
+ header .menu-links a {
+        font-size:30px;
+        color:#fff;
+        font-weight:900;
+        margin:15px;
+        
+    }
+    header .menu-links a:hover, header .menu-links a:focus {
+         text-decoration:none;
+          -webkit-transform: scale(1.5);
+       -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+         -o-transform: scale(1.5);
+            transform: scale(1.5);
+             -webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+         -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+    }
 
-ul li
-{ list-style-type: circle;
-  margin: 0 0 6px 0; 
-  padding: 0 0 4px 5px;}
+   
 
-ol
-{ margin: 8px 0 22px 20px;}
+/*================================
+  HOME SECTION STYLES
+==================================*/
 
-ol li
-{ margin: 0 0 11px 0;}
+#home {
+    background: url(../img/home.jpg) no-repeat center center; 
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;    
+}
 
-#main, #logo, #menubar, #site_content, #footer
-{ margin-left: auto; 
-  margin-right: auto;}
+    #home .overlay {
+        padding-top: 120px;
+        background-color: rgba(36, 36, 36, 0.8);
+        min-height: 700px;
+        padding-bottom: 40px;
+    }
+     #home h1 {
+      margin-bottom: 20px;
+line-height: 40px;
+font-size: 35px;
+color: #48A5FF;
+text-transform:uppercase;
+    }
+    #home h4 {
+      margin-bottom: 30px;
+line-height: 40px;
+font-size: 20px;
+color: #D0D0D0;
+    }
 
-#header
-{ background: #F79F00;
-  height: 240px;}
+/*================================
+  BUTTON STYLES
+==================================*/
+.btn-custom {
+   min-height:60px;
+    border-radius:30px;
+-webkit-border-radius:30px;
+-moz-border-radius:30px;
+padding:15px 40px 15px 40px;
+-webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+   margin:25px 5px 5px 0px;
+}
 
-#logo
-{ width: 825px;
-  position: relative;
-  height: 168px;
-  background: #8B0073 url(logo.png) no-repeat;}
-
-#logo #logo_text 
-{ position: absolute; 
-  top: 20px;
-  left: 0;}
-
-#logo h1, #logo h2
-{ font: normal 300% 'century gothic', arial, sans-serif;
-  border-bottom: 0;
-  text-transform: none;
-  margin: 0;}
-
-#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover 
-{ padding: 22px 0 0 0;
-  color: #FFF;
-  letter-spacing: 0.1em;
-  text-decoration: none;}
-
-#logo_text h1 a .logo_colour
-{ color: #F05A00;}
-
-#logo_text h2
-{ font-size: 100%;
-  padding: 4px 0 0 0;
-  color: #FFF;}
-
-#menubar
-{ width: 877px;
-  height: 72px;
-  padding: 0;
-  background: #5B2660 url(menu.png) repeat-x;} 
-
-ul#menu, ul#menu li
-{ float: left;
-  margin: 0; 
-  padding: 0;}
-
-ul#menu li
-{ list-style: none;}
-
-ul#menu li a
-{ letter-spacing: 0.1em;
-  font: normal 100% 'lucida sans unicode', arial, sans-serif;
-  display: block; 
-  float: left; 
-  height: 37px;
-  padding: 29px 26px 6px 26px;
-  text-align: center;
-  color: #FFF;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: transparent;} 
-
-ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
-{ color: #FFF;
-  background: #3F1B41 url(menu_select.png) repeat-x;}
-
-#site_content
-{ width: 837px;
-  overflow: hidden;
-  margin: 0 auto 0 auto;
-  padding: 20px 24px 20px 37px;
-  background: #FFF url(content.png) repeat-y;} 
-
-.sidebar
-{ float: right;
-  width: 190px;
-  padding: 0 15px 20px 15px;}
-
-.sidebar ul
-{ width: 178px; 
-  padding: 4px 0 0 0; 
-  margin: 4px 0 30px 0;}
-
-.sidebar li
-{ list-style: none; 
-  padding: 0 0 7px 0; }
-
-.sidebar li a, .sidebar li a:hover
-{ padding: 0 0 0 40px;
-  display: block;
-  background: transparent url(link.png) no-repeat left center;} 
-
-.sidebar li a.selected
-{ color: #444;
-  text-decoration: none;} 
-
-#content
-{ text-align: left;
-  width: 595px;
-  padding: 0;}
-
-#content ul
-{ margin: 2px 0 22px 0px;}
-
-#content ul li
-{ list-style-type: none;
-  background: url(bullet.png) no-repeat;
-  margin: 0 0 6px 0; 
-  padding: 0 0 4px 25px;
-  line-height: 1.5em;}
-
-#footer
-{ width: 878px;
-  font: normal 100% 'lucida sans unicode', arial, sans-serif;
-  height: 33px;
-  padding: 24px 0 5px 0;
-  text-align: center; 
-  background: #29425E url(footer.png) repeat-x;
-  color: #FFF;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;}
-
-#footer a
-{ color: #FFF;
-  text-decoration: none;}
-
-#footer a:hover
-{ color: #FFF;
-  text-decoration: underline;}
-
-.search
-{ color: #5D5D5D; 
-  border: 1px solid #BBB; 
-  width: 134px; 
-  padding: 4px; 
-  font: 100% arial, sans-serif;}
-
-#colours
-{ height: 0px;
-  text-align: right;
-  padding: 66px 16px 0px 300px;}
+.btn-one {   
+background-color: transparent;
+border:5px solid #48A5FF; 
+color:#000;       
   
-.form_settings
-{ margin: 15px 0 0 0;}
+}
+ .btn-one:hover {
+ background-color:#48A5FF;
+ color:#fff;
+ text-decoration:none;
+    }
 
-.form_settings p
-{ padding: 0 0 4px 0;}
-
-.form_settings span
-{ float: left; 
-  width: 200px; 
-  text-align: left;}
+ .btn-two {   
+background-color: #48A5FF;
+border:5px solid #48A5FF; 
+color:#fff;       
   
-.form_settings input, .form_settings textarea
-{ padding: 5px; 
-  width: 299px; 
-  font: 100% arial; 
-  border: 1px solid #E5E5DB; 
-  background: #FFF; 
-  color: #47433F;}
+}
+ .btn-two:hover {
+ background-color:transparent;
+ color:#000;
+ text-decoration:none;
+    }
+.btn-three {   
+   
+background-color:transparent;
+border:5px solid #737373; 
+color:#000;       
   
-.form_settings .submit
-{ font: 100% arial; 
-  border: 1px solid; 
-  width: 99px; 
-  margin: 0 0 0 212px; 
-  height: 33px;
-  padding: 2px 0 3px 0;
-  cursor: pointer; 
-  background: #F05A00; 
-  color: #FFF;}
+}
+ .btn-three:hover {
 
-.form_settings textarea, .form_settings select
-{ font: 100% arial; 
-  width: 299px;}
+ background-color:#737373;
+ color:#fff;
+ text-decoration:none;
+    }
 
-.form_settings select
-{ width: 310px;}
+ 
+ /*================================
+    ABOUT STYLES
+==================================*/
 
-.form_settings .checkbox
-{ margin: 4px 0; 
-  padding: 0; 
-  width: 14px;
-  border: 0;
-  background: none;}
+ .icon-wrapper {
+    padding-bottom:20px;
+    padding-top:20px;
+    font-size:50px;
+}
+ 
+.img-side {
+    max-height:420px;
+}
+ /*================================
+    CLIENTS SECTION STYLES
+==================================*/
 
-.separator
-{ width: 100%;
-  height: 0;
-  border-top: 1px solid #D9D5CF;
-  border-bottom: 1px solid #FFF;
-  margin: 0 0 20px 0;}
-  
-table
-{ margin: 10px 0 30px 0;}
+   #clients {
+    background: url(../img/clients.jpg) no-repeat center center; 
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;    
+}
 
-table tr th, table tr td
-{ background: #3B3B3B;
-  color: #FFF;
-  padding: 7px 4px;
-  text-align: left;}
-  
-table tr td
-{ background: #F0EFE2;
-  color: #47433F;
-  border-top: 1px solid #FFF;}
+    #clients .overlay {
+        background-color: rgba(36, 36, 36, 0.8);
+        min-height: 550px;
+    }
+
+.client-cover {
+    background-color:#0094ff;
+    padding:100px 50px 100px 50px;
+    color:#fff;
+}
+    /* TESTIMONIAL */
+       .testimonial-section {
+    width: 100%;
+    height: auto;
+    padding: 35px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: 5px solid rgba(0, 79, 255, 0.24);
+font-size: 20px;
+color: rgba(234, 234, 234, 1);
+line-height: 35px;
+}
+.testimonial-section:after {
+    top: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color:rgba(0, 79, 255, 0.24);
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+.testimonial-section-name {
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align:left;
+    color:rgba(0, 79, 255, 1);
+    font-size:16px;
+}
+    .testimonial-section-name img {
+        width:100px;
+        border: 5px solid rgba(234, 234, 234, 1);
+    }
+.carousel-indicators-set {
+    position:static;
+    margin-left:0px;
+    width:100%;
+    color:rgba(234, 234, 234, 1);
+}
+/*================================
+    FEATURES STYLES
+==================================*/
+#features {
+    background-color:rgba(234, 234, 234, 0.90);
+}
+
+/*================================
+    EMAIL-SUBSCRIBE STYLES
+ ============================  */
+
+#email-subscribe .form-control
+{
+display:inline;
+height:50px;
+font-size:20px;
+margin-right:20px;
+width:60%;
+}
+
+#email-subscribe .btn-subscribe
+{
+height:50px;
+font-size:20px;
+color: #fff;
+background-color: #737373;
+border-color: #5C5C5C;
+margin-top:-10px;
+}
+
+/*================================
+    CONATCT SECTION STYLES
+==================================*/
+
+   #contact {
+    background: url(../img/contact.jpg) no-repeat center center; 
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;    
+}
+
+    #contact .overlay {
+        background-color: rgba(36, 36, 36, 0.8);
+        min-height: 350px;
+    }
+     #contact .social a, #contact .social a:hover, #contact .social a:focus {
+            margin: 2px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.36);
+            color: #fff;
+            font-size: 25px;
+        }
+.space {
+    height:40px;
+}
+.contact-cover {
+    background-color:#0094ff;
+    padding:50px 50px 50px 50px;
+    color:#fff;
+}
+/*================================
+    FOOTER SECTION STYLES
+ ============================  */
+footer {
+    padding:15px;
+    background-color:#48A5FF;
+    color:#fff;
+    }
+    footer a,footer a:hover,footer a:focus {
+        color:#fff;
+        text-decoration:none;
+        margin-right:10px;
+        margin-left:10px;
+    }
+
+/*================================
+    RESPONSIVE STYLES
+ ============================  */
+
+@media (min-width: 100px) and (max-width: 498px) {
+    #email-subscribe .form-control
+{
+display:block;
+width:100%;
+}
+
+#email-subscribe .btn-subscribe
+{
+margin-top:20px;
+}
+
+}
