@@ -16,10 +16,10 @@ client = pymongo.MongoClient(MONGODB_URI)
 db = client.get_default_database()
 cases = db['cases']
 
-@app.route('/')
+@app.route('/oldHomepage')
 def homepage():
 	return send_from_directory('templates', 'realIndex.html')
-@app.route('/newHomepage')
+@app.route('/')
 def home2():
 	return send_from_directory('templates', 'index.html')
 
