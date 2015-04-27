@@ -37,6 +37,7 @@ def home2():
 	        'audit': request.form['audit'],
 	        'prohibitions': request.form['prohibitions'],
 	        'pressCoverage': request.form['pressCoverage']
+
 	    }
 		]
 		cases.insert(newCase1)
