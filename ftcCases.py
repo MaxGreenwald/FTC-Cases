@@ -26,14 +26,12 @@ def home2():
 	if request.method == 'POST':
 		newCase1 = [
 	    {
-	        'case': request.form['case'],
-	        'date': request.form['date'],
 	        'company name': request.form['companyName'],
+	        'date': request.form['date'],
 	        'act violated': request.form['actViolated'],
 	        'categoryPC': request.form['categoryPC'],
 	        'summaryPC': request.form['summaryPC'],
 	        'redressObtained': request.form['redressObtained'],
-	        'financial': request.form['financial'],
 	        'audit': request.form['audit'],
 	        'prohibitions': request.form['prohibitions'],
 	        'pressCoverage': request.form['pressCoverage']
@@ -46,8 +44,6 @@ def home2():
 @app.route('/add', methods=['GET', 'POST'])
 def addCase():
 	if request.method == 'POST':
-		print "hello"
-		print request.form['case']
 		newCase1 = [
 	    {
 	        'case': request.form['case'],
@@ -64,11 +60,6 @@ def addCase():
 	    }
 		]
 		cases.insert(newCase1)
-	
-	
-		#print projectpath
-	
-
 	return send_from_directory('templates', 'add.html')
 @app.route('/view')
 def viewTable():
@@ -76,7 +67,7 @@ def viewTable():
 	caseFinder = cases.find()
 	tableData = []
 	for x in caseFinder:
-		newCase = [x['case'], x['date'], x['company name'], x['act violated'], x['categoryPC'], x['summaryPC'], x['redressObtained'], x['financial'], x['audit'], x['prohibitions'], x['pressCoverage']]
+		newCase = [x['company name'], x['date'], x['act violated'], x['categoryPC'], x['summaryPC'], x['redressObtained'], x['audit'], x['prohibitions'], x['pressCoverage']]
 		tableData.append(newCase)
 	return render_template('view.html', tableData = tableData)
 
