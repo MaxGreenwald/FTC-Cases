@@ -94,7 +94,7 @@ header {
 ==================================*/
 
 #home {
-    background: url(../img/3.jpg) no-repeat center center; 
+    background: url(../img/1.jpg) no-repeat center center; 
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
@@ -294,7 +294,7 @@ margin-top:-10px;
 ==================================*/
 
    #contact {
-    background: url(../img/mathead.jpg);
+    /*background: url(../img/mathead.jpg);*/
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
