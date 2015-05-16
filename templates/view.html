@@ -81,7 +81,7 @@
 
 
 <div class= "container">
-<h1> Federal Trade Commission Cases </h1>
+<h1> Federal Trade Commission Data Security Cases </h1>
 
 <table id= "ftcTable" class= "display" cellspacing ="0" width= "100%">
 	<thead>
@@ -89,11 +89,31 @@
 			<th>Company Name(s)..... (FTC vs.) ........................</th>
 			<th>Date</th>
 			<th>Act Violated</th>
-			<th>Category of Problematic Conduct.....................    </th>
+			<th>Category: False Advertising    </th>
+      <th>Category: Encryption Issues    </th>
+      <th>Category: Security Breach    </th>
+      <th>Category: Data Leakage    </th>
+      <th>Category: Poor Practice    </th>
+      <th>Category: Security Flaws    </th>
+      <th>Category: Privacy Policy Breach    </th>
 			<th>Summary of Problematic Conduct....................................................................              </th>
 			<th>Financial Redress</th>
-			<th>Audit.....................................................................          </th>
-			<th>Prohibitions/Mandated Actions...........................................................</th>
+			<th>Audit: Must Provide Copies of Advertisements Towards Consumer</th>
+      <th>Audit: Maintain Copies of Privacy Statments, Disclosures, Invoices, and Record Concerning PI Collection</th>
+      <th>Audit: Maintain All Statements About Privacy Policies and Changes</th>
+      <th>Audit: Maintain all Consumer Complaints</th>
+      <th>Audit: Must Provide Documents Signifying Compliance with Security Program</th>
+      <th>Audit: Must Provide Copy of Judgement to Employees, etc.</th>
+      <th>Audit: Must Notify Comission About Company Changes</th>
+      <th>Audit: Report Personal Changes To Employment and Business Affiliations</th>
+      <th>Audit: Report Detailing Manner of Compliance</th>
+			<th>Mandate: No Misrepresentation of extent of Security Measures</th>
+      <th>Mandate: Adopt Security Program</th>
+      <th>Mandate: Assessement From Third Party Detailing Effctiveness of Program</th>
+      <th>Mandate: Will not Violate GLB Rule</th>
+      <th>Mandate: Obtain Assessment About Compliance to GLB</th>
+      <th>Mandate: Will not Misrepresent Data Collection Policies</th>
+      <th>Mandate: Will not Disclose Data Without Proper Consent and Disclosure</th>
 			<th>Press coverage</th>
 		</tr>
 	</thead>
@@ -102,7 +122,16 @@
 		{% for case in tableData %}
 		<tr>
 			{% for x in case %}
-			<td> {{x}} </td>
+        {%if ("http") in x: %}
+          <td> 
+          {% for article in x.split('\n'): %}
+            <a href= {{article}} target="_blank"> {{article}} </a>
+            <br>
+          {% endfor %}
+          </td>      
+        {% else: %}
+          <td> {{x}} </td>
+        {% endif %}
 			{% endfor %}
 
 
