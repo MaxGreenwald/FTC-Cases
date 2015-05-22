@@ -1,19 +1,9 @@
 from flask import Flask, send_from_directory, render_template, request
 # -*- coding: utf-8 -*-
 import json
-# import pymongo
 app = Flask(__name__)
 
 
-# MONGODB_URI = 'mongodb://maxgreenwald:oliver11@ds061621.mongolab.com:61621/ftc-cases' 
-# app = Flask(__name__)
-# client = pymongo.MongoClient(MONGODB_URI)
-# db = client.get_default_database()
-# cases = db['cases']
-
-@app.route('/oldHomepage', methods=['GET', 'POST'])
-def homepage():
-	return send_from_directory('templates', 'realIndex.html')
 @app.route('/', methods=['GET', 'POST'])
 def home2():
 
@@ -36,26 +26,6 @@ def home2():
 		# cases.insert(newCase1)
 	return send_from_directory('templates', 'index.html')
 
-# @app.route('/add', methods=['GET', 'POST'])
-# def addCase():
-# 	if request.method == 'POST':
-# 		newCase1 = [
-# 	    {
-# 	        'case': request.form['case'],
-# 	        'date': request.form['date'],
-# 	        'company name': request.form['companyName'],
-# 	        'act violated': request.form['actViolated'],
-# 	        'categoryPC': request.form['categoryPC'],
-# 	        'summaryPC': request.form['summaryPC'],
-# 	        'redressObtained': request.form['redressObtained'],
-# 	        'financial': request.form['financial'],
-# 	        'audit': request.form['audit'],
-# 	        'prohibitions': request.form['prohibitions'],
-# 	        'pressCoverage': request.form['pressCoverage']
-# 	    }
-# 		]
-# 		cases.insert(newCase1)
-# 	return send_from_directory('templates', 'add.html')
 @app.route('/view')
 def viewTable():
 
