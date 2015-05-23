@@ -29,10 +29,10 @@ def home2():
 @app.route('/view')
 def viewTable():
 
-	caseFinder = json.load(open('static/json/ftc5-14.json'))
+	caseFinder = json.load(open('static/json/ftc-casesFinal.json'))
 	tableData = []
 	for x in caseFinder:
-		newCase = [x['FIELD1'], x['FIELD2'],x['FIELD3'],x['FIELD4'],x['FIELD5'],x['FIELD6'],x['FIELD7'],x['FIELD8'],x['FIELD9'],x['FIELD10'],x['FIELD11'],x['FIELD12'],x['FIELD13'],x['FIELD14'],x['FIELD15'],x['FIELD16'],x['FIELD17'],x['FIELD18'],x['FIELD19'],x['FIELD20'],x['FIELD21'],x['FIELD22'],x['FIELD23'],x['FIELD24'],x['FIELD25'],x['FIELD26'],x['FIELD27'],x['FIELD28'],x['FIELD29']]
+		newCase = [x['FIELD1'], x['FIELD2'],x['FIELD3'],x['FIELD4'],x['FIELD5'],x['FIELD6'],x['FIELD7'],x['FIELD8'],x['FIELD9'],x['FIELD10'],x['FIELD11'],x['FIELD12'],x['FIELD13'],x['FIELD14'],x['FIELD15'],x['FIELD16'],x['FIELD17'],x['FIELD18'],x['FIELD19'],x['FIELD20'],x['FIELD21'],x['FIELD22'],x['FIELD23'],x['FIELD24'],x['FIELD25'],x['FIELD26'],x['FIELD27'],x['FIELD28'],x['FIELD29'],x['FIELD30'],x['FIELD31'],x['FIELD32'],x['FIELD33'],x['FIELD34']]
 		tableData.append(newCase)
 	return render_template('view.html', tableData = tableData)
 
